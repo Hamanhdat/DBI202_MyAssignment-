@@ -1,0 +1,55 @@
+các bảng chính:
+1. assessments:
+	-courseID
+	-category
+	-type
+	-part 
+	-duration
+	-LO
+	-question type
+	-No Question 
+	-Knowledge and skill
+	-grading guide
+	-note
+2. result
+	-courseID
+	-course name
+	-semester 
+	-group
+	-start date
+	-end date
+	-average mark 
+	-status
+3. detail result
+	-courseID
+	-category
+	-grade item
+	-weight
+	-value
+	-comment 
+4. student
+	-student ID
+	-student name
+	-date of birth 
+	-gender
+	-address
+5. group
+	-groupID
+	-groupName
+	-lecturerID
+	-courseID
+
+6. class
+	-groupID
+	-Student ID
+	
+7. Course
+	-courseID
+	-courseName
+8. Categories
+	-courseID
+	-category
+	
+9. lecturer
+	-LecturerID
+	-LecturerName
