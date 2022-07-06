@@ -1,5 +1,6 @@
 các bảng chính:
 1. assessments:
+	-Aid
 	-courseID
 	-category
 	-type
@@ -38,11 +39,11 @@ các bảng chính:
 	-groupName
 	-lecturerID
 	-courseID
-
+	
 6. class
 	-groupID
 	-Student ID
-	
+	-semesterCour
 7. Course
 	-courseID
 	-courseName
