@@ -47,6 +47,8 @@ các bảng chính:
 7. Course
 	-courseID
 	-courseName
+	-start date
+	-end date
 8. Categories
 	-courseID
 	-category
