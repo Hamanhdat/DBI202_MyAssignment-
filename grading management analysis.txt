@@ -53,3 +53,19 @@ các bảng chính:
 9. lecturer
 	-LecturerID
 	-LecturerName
+10.semester
+	-semester
+	-season
+	-year
+11.Assessment_Student
+	-Aid
+	-Sid
+	-date
+	-score
+12.GPA 
+	-Sid
+	-Sname
+	-GPA(điểm chung bình:course total)
+
+
+tính điểm trung bình nếu sinh viên chưa thi thì vẫn tính, vẫn tính vào GPA
