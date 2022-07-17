@@ -1565,5 +1565,15 @@ AS
 	UPDATE [join] SET average = 8.645, [status] = '000' WHERE SiD = 'HE00001' AND CLid = 'FA21APRO'
 
 	SELECT * FROM [join]
+	--order by query
+SELECT * FROM student ORDER BY [First name], [Last Name]
+--inner join
+SELECT  student.SiD, [Last Name], [First Name], class.CLid, AiD, semester.semester,semester.[start date],semester.[end date]
+FROM student INNER JOIN [join] ON student.SiD=[join].SiD
+				INNER JOIN class ON [join].CLid=class.CLid
+				INNER JOIN semester ON semester.semester=class.semester
+				INNER JOIN Assessment ON Assessment.CiD=class.CiD
+	
+	
 ```
 
