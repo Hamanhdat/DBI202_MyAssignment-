@@ -1525,6 +1525,45 @@ DECLARE @NumOfStu INT = 0;
 EXEC Count_Student @GR = 'IA1604', @COUNT = @NumOfStu OUT
 PRINT @NumOfStu;
 
+CREATE TRIGGER [Average] ON [join]
+AFTER INSERT, UPDATE
+AS
+	DECLARE @AVG FLOAT;
+	DECLARE @CLASS VARCHAR(50);
+	DECLARE @STU VARCHAR(50);
+	DECLARE @AVERAGE FLOAT;
+	DECLARE @STA VARCHAR(50);
+	SELECT @STU = SiD, @CLASS = CLid, @AVG = average, @STA = [status] FROM inserted;
 
+	SELECT @AVERAGE = SUM(Score * [weight])  
+	FROM 
+		(SELECT student.SiD,enroll.GiD
+	FROM student INNER JOIN [join] ON student.SiD=[join].SiD
+					INNER JOIN enroll ON [join].CLid=enroll.CLid
+	) AS J INNER JOIN Enroll ON J.GiD = Enroll.GiD
+					INNER JOIN [dbo].View_Assess_AssessSystem AS VAA ON  VAA.GiD = enroll.GiD
+					INNER JOIN [result ] ON J.SiD = [result ].Sid AND [result ].Aid = VAA.Aid
+					
+	WHERE J.SiD = @STU AND VAA.CLid = @CLASS
+	GROUP BY J.SiD, VAA.CLid, VAA.CiD, VAA.GiD
+	IF @AVG <> @AVERAGE
+	BEGIN
+		PRINT 'Average score added to [View] was not corresponding to the average scored counted from [Grade]'
+		ROLLBACK TRAN
+	END
+	ELSE IF (NOT @STA = 'PASSED') AND (NOT @STA = 'NOT PASSED')
+	BEGIN
+		PRINT 'Status must be passed or not passed'
+		ROLLBACK TRAN
+	END
+	ELSE IF (@AVG <= 4 AND @STA = 'PASSED') OR (@AVG > 4 AND @STA = 'NOT PASSED')
+	BEGIN
+		PRINT 'Incorrect Status'
+		ROLLBACK TRAN
+	END
+	
+	UPDATE [join] SET average = 8.645, [status] = '000' WHERE SiD = 'HE00001' AND CLid = 'FA21APRO'
+
+	SELECT * FROM [join]
 ```
 
