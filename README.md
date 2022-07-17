@@ -1587,6 +1587,13 @@ SELECT * FROM Student WHERE [Last Name] = N'A' AND [First Name] = 'Nguyen Van'
 SELECT r.Sid, ass.CiD, c.CaID, AVG(Score) as sub_total, [Completion Criteria] FROM [result ] r
 INNER JOIN [Assessment system] a on r.Aid = a.Aid
 INNER JOIN [Categories] c on c.CaID = a.CaID
-INNER JOIN Assessment ass on ass.Aid = a.Aid  GROUP BY CiD, Sid, c.CaID, [Completion Criteria] Having AVG(Score) >5	
+INNER JOIN Assessment ass on ass.Aid = a.Aid  GROUP BY CiD, Sid, c.CaID, [Completion Criteria] Having AVG(Score) >5
+
+--o   A query that uses a sub-query in the WHERE clause:
+SELECT J.SiD,CONCAT([First Name], ' ',[Last Name] )  AS [Student Name], CLid,average,[status]
+FROM 
+	Student inner join [join] AS J ON Student.SiD = J.SiD
+			 INNER JOIN [result ] AS r ON J.SiD = r.Sid
+WHERE CLid = (SELECT CLid FROM Class WHERE CLid = 'FA21APRO')
 ```
 
