@@ -1574,6 +1574,19 @@ FROM student INNER JOIN [join] ON student.SiD=[join].SiD
 				INNER JOIN semester ON semester.semester=class.semester
 				INNER JOIN Assessment ON Assessment.CiD=class.CiD
 	
-	
+-- A query that uses aggregate functions
+Select Max([Score]) as [Highest Mark] From [result ]
+-- A query that uses a sub-query in the WHERE clause
+SELECT *
+FROM Student WHERE DOB <= ALL (SELECT DOB FROM Student);
+--find information
+CREATE INDEX Stu_Name ON Student([Last Name], [First Name])
+
+SELECT * FROM Student WHERE [Last Name] = N'A' AND [First Name] = 'Nguyen Van'
+--A query that uses the GROUP BY and HAVING clauses
+SELECT r.Sid, ass.CiD, c.CaID, AVG(Score) as sub_total, [Completion Criteria] FROM [result ] r
+INNER JOIN [Assessment system] a on r.Aid = a.Aid
+INNER JOIN [Categories] c on c.CaID = a.CaID
+INNER JOIN Assessment ass on ass.Aid = a.Aid  GROUP BY CiD, Sid, c.CaID, [Completion Criteria] Having AVG(Score) >5	
 ```
 
