@@ -1,6 +1,7 @@
+``` sql
 USE [AssignmentDBI]
 GO
-/****** Object:  Table [dbo].[Assessment]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[Assessment]    Script Date: 7/17/2022 3:06:05 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15,7 +16,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Assessment system]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[Assessment system]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -39,7 +40,7 @@ CREATE TABLE [dbo].[Assessment system](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categories]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[Categories]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -55,14 +56,13 @@ CREATE TABLE [dbo].[Categories](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[class]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[class]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[class](
 	[CLid] [nchar](10) NOT NULL,
-	[LiD] [varchar](50) NULL,
 	[CiD] [varchar](50) NULL,
 	[semester] [varchar](50) NOT NULL,
  CONSTRAINT [PK_class] PRIMARY KEY CLUSTERED 
@@ -71,7 +71,7 @@ CREATE TABLE [dbo].[class](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[course]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[course]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -85,7 +85,7 @@ CREATE TABLE [dbo].[course](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[enroll]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[enroll]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -100,7 +100,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[group]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[group]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -115,7 +115,7 @@ CREATE TABLE [dbo].[group](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[join]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[join]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -130,7 +130,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Lecturer]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[Lecturer]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -147,7 +147,7 @@ CREATE TABLE [dbo].[Lecturer](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[result ]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[result ]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -164,7 +164,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[semester]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[semester]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -179,7 +179,7 @@ CREATE TABLE [dbo].[semester](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[student]    Script Date: 7/15/2022 10:17:57 AM ******/
+/****** Object:  Table [dbo].[student]    Script Date: 7/17/2022 3:06:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -195,6 +195,21 @@ CREATE TABLE [dbo].[student](
  CONSTRAINT [PK_student] PRIMARY KEY CLUSTERED 
 (
 	[SiD] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[supervisor]    Script Date: 7/17/2022 3:06:06 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[supervisor](
+	[CLid] [nchar](10) NOT NULL,
+	[LiD] [varchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CLid] ASC,
+	[LiD] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -496,109 +511,109 @@ INSERT [dbo].[Categories] ([CaID], [category], [type], [Completion Criteria]) VA
 GO
 INSERT [dbo].[Categories] ([CaID], [category], [type], [Completion Criteria]) VALUES (N'PT2', N'Progress Test 2', N'On-Going', N'>0')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21APRO  ', N'GVA', N'PRO192', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21APRO  ', N'PRO192', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21BIAO  ', N'GVB', N'iao202', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21BIAO  ', N'iao202', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21BNWC  ', N'GVC', N'NWC204', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21BNWC  ', N'NWC204', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21CLAB  ', N'GVD', N'lab211', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21CLAB  ', N'lab211', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21DDBI  ', N'GVE', N'dbi202', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21DDBI  ', N'dbi202', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21ECSD  ', N'GVF', N'csd201', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21ECSD  ', N'csd201', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21FJPD  ', N'GVG', N'jpd113', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21FJPD  ', N'jpd113', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21GSSG  ', N'GVH', N'SSG104', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21GSSG  ', N'SSG104', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21HOSG  ', N'GVI', N'OSG202', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21HOSG  ', N'OSG202', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21HPRF  ', N'GVJ', N'PRF192', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21HPRF  ', N'PRF192', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21ICSI  ', N'GVK', N'CSI104', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21ICSI  ', N'CSI104', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21IMAE  ', N'GVA', N'MAE101', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21IMAE  ', N'MAE101', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21ISSL  ', N'GVB', N'SSL101c', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21ISSL  ', N'SSL101c', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21JMAD  ', N'GVC', N'MAD101', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21JMAD  ', N'MAD101', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'FA21KCEA  ', N'GVD', N'CEA201', N'FALL 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'FA21KCEA  ', N'CEA201', N'FALL 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22ACSD  ', N'GVE', N'csd201', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22ACSD  ', N'csd201', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22ADBI  ', N'GVF', N'dbi202', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22ADBI  ', N'dbi202', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22APRO  ', N'GVG', N'PRO192', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22APRO  ', N'PRO192', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22BCSD  ', N'GVH', N'csd201', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22BCSD  ', N'csd201', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22BIAO  ', N'GVI', N'iao202', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22BIAO  ', N'iao202', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22BNWC  ', N'GVJ', N'NWC204', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22BNWC  ', N'NWC204', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22CLAB  ', N'GVK', N'lab211', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22CLAB  ', N'lab211', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22DDBI  ', N'GVA', N'dbi202', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22DDBI  ', N'dbi202', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22DLAB  ', N'GVB', N'lab211', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22DLAB  ', N'lab211', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22ECSD  ', N'GVC', N'csd201', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22ECSD  ', N'csd201', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22FJPD  ', N'GVD', N'jpd113', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22FJPD  ', N'jpd113', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22FSSG  ', N'GVE', N'SSG104', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22FSSG  ', N'SSG104', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22GJPD  ', N'GVF', N'jpd113', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22GJPD  ', N'jpd113', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22GSSG  ', N'GVG', N'SSG104', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22GSSG  ', N'SSG104', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22HCEA  ', N'GVH', N'CEA201', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22HCEA  ', N'CEA201', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22HOSG  ', N'GVI', N'OSG202', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22HOSG  ', N'OSG202', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22HPRF  ', N'GVJ', N'PRF192', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22HPRF  ', N'PRF192', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22IMAE  ', N'GVK', N'MAE101', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22IMAE  ', N'MAE101', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22ISSL  ', N'GVA', N'SSL101c', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22ISSL  ', N'SSL101c', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22JCEA  ', N'GVB', N'CEA201', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22JCEA  ', N'CEA201', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22JMAD  ', N'GVC', N'MAD101', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22JMAD  ', N'MAD101', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SP22KCSI  ', N'GVD', N'CSI104', N'SPRING 2022')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SP22KCSI  ', N'CSI104', N'SPRING 2022')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21ACSD  ', N'GVE', N'csd201', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21ACSD  ', N'csd201', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21ADBI  ', N'GVF', N'dbi202', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21ADBI  ', N'dbi202', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21APRO  ', N'GVG', N'PRO192', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21APRO  ', N'PRO192', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21BIAO  ', N'GVH', N'iao202', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21BIAO  ', N'iao202', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21BNWC  ', N'GVI', N'NWC204', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21BNWC  ', N'NWC204', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21CLAB  ', N'GVJ', N'lab211', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21CLAB  ', N'lab211', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21FJPD  ', N'GVK', N'jpd113', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21FJPD  ', N'jpd113', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21FSSG  ', N'GVA', N'SSG104', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21FSSG  ', N'SSG104', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21HOSG  ', N'GVB', N'OSG202', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21HOSG  ', N'OSG202', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21HPRF  ', N'GVC', N'PRF192', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21HPRF  ', N'PRF192', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21IMAE  ', N'GVD', N'MAE101', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21IMAE  ', N'MAE101', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21ISSL  ', N'GVE', N'SSL101c', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21ISSL  ', N'SSL101c', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21JCEA  ', N'GVF', N'CEA201', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21JCEA  ', N'CEA201', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21JMAD  ', N'GVG', N'MAD101', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21JMAD  ', N'MAD101', N'SUMMER 2021')
 GO
-INSERT [dbo].[class] ([CLid], [LiD], [CiD], [semester]) VALUES (N'SU21KCSI  ', N'GVH', N'CSI104', N'SUMMER 2021')
+INSERT [dbo].[class] ([CLid], [CiD], [semester]) VALUES (N'SU21KCSI  ', N'CSI104', N'SUMMER 2021')
 GO
 INSERT [dbo].[course] ([CiD], [CourseName]) VALUES (N'CEA201', N'Computer Organization and Architecture')
 GO
@@ -1302,6 +1317,110 @@ INSERT [dbo].[student] ([SiD], [First name], [Last Name], [DoB], [gender], [addr
 GO
 INSERT [dbo].[student] ([SiD], [First name], [Last Name], [DoB], [gender], [address], [mail]) VALUES (N'HE00050', N'Nguyen Thi', N'Y', CAST(N'2002-02-25' AS Date), 0, N'hanoi', N'ynv@fpt.edu.vn')
 GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21APRO  ', N'GVA')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21BIAO  ', N'GVB')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21BNWC  ', N'GVC')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21CLAB  ', N'GVD')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21DDBI  ', N'GVE')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21ECSD  ', N'GVF')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21FJPD  ', N'GVG')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21GSSG  ', N'GVH')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21HOSG  ', N'GVI')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21HPRF  ', N'GVJ')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21ICSI  ', N'GVK')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21IMAE  ', N'GVA')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21ISSL  ', N'GVB')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21JMAD  ', N'GVC')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'FA21KCEA  ', N'GVD')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22ACSD  ', N'GVE')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22ADBI  ', N'GVF')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22APRO  ', N'GVG')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22BCSD  ', N'GVH')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22BIAO  ', N'GVI')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22BNWC  ', N'GVJ')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22CLAB  ', N'GVK')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22DDBI  ', N'GVA')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22DLAB  ', N'GVB')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22ECSD  ', N'GVC')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22FJPD  ', N'GVD')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22FSSG  ', N'GVE')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22GJPD  ', N'GVF')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22GSSG  ', N'GVG')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22HCEA  ', N'GVH')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22HOSG  ', N'GVI')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22HPRF  ', N'GVJ')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22IMAE  ', N'GVK')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22ISSL  ', N'GVA')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22JCEA  ', N'GVB')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22JMAD  ', N'GVC')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SP22KCSI  ', N'GVD')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21ACSD  ', N'GVE')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21ADBI  ', N'GVF')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21APRO  ', N'GVG')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21BIAO  ', N'GVH')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21BNWC  ', N'GVI')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21CLAB  ', N'GVJ')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21FJPD  ', N'GVK')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21FSSG  ', N'GVA')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21HOSG  ', N'GVB')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21HPRF  ', N'GVC')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21IMAE  ', N'GVD')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21ISSL  ', N'GVE')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21JCEA  ', N'GVF')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21JMAD  ', N'GVG')
+GO
+INSERT [dbo].[supervisor] ([CLid], [LiD]) VALUES (N'SU21KCSI  ', N'GVH')
+GO
 ALTER TABLE [dbo].[Assessment]  WITH CHECK ADD  CONSTRAINT [FK_Assessment_Assessment system] FOREIGN KEY([Aid])
 REFERENCES [dbo].[Assessment system] ([Aid])
 GO
@@ -1321,11 +1440,6 @@ ALTER TABLE [dbo].[class]  WITH CHECK ADD  CONSTRAINT [FK_class_course] FOREIGN 
 REFERENCES [dbo].[course] ([CiD])
 GO
 ALTER TABLE [dbo].[class] CHECK CONSTRAINT [FK_class_course]
-GO
-ALTER TABLE [dbo].[class]  WITH CHECK ADD  CONSTRAINT [FK_class_Lecturer] FOREIGN KEY([LiD])
-REFERENCES [dbo].[Lecturer] ([LiD])
-GO
-ALTER TABLE [dbo].[class] CHECK CONSTRAINT [FK_class_Lecturer]
 GO
 ALTER TABLE [dbo].[class]  WITH CHECK ADD  CONSTRAINT [FK_class_semester] FOREIGN KEY([semester])
 REFERENCES [dbo].[semester] ([semester])
@@ -1362,3 +1476,14 @@ REFERENCES [dbo].[student] ([SiD])
 GO
 ALTER TABLE [dbo].[result ] CHECK CONSTRAINT [FK_assessment_Student_student1]
 GO
+ALTER TABLE [dbo].[supervisor]  WITH CHECK ADD  CONSTRAINT [FK_supervisor_class] FOREIGN KEY([CLid])
+REFERENCES [dbo].[class] ([CLid])
+GO
+ALTER TABLE [dbo].[supervisor] CHECK CONSTRAINT [FK_supervisor_class]
+GO
+ALTER TABLE [dbo].[supervisor]  WITH CHECK ADD  CONSTRAINT [FK_supervisor_Lecturer] FOREIGN KEY([LiD])
+REFERENCES [dbo].[Lecturer] ([LiD])
+GO
+ALTER TABLE [dbo].[supervisor] CHECK CONSTRAINT [FK_supervisor_Lecturer]
+GO
+```
