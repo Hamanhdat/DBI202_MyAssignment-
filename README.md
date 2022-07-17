@@ -1488,5 +1488,43 @@ REFERENCES [dbo].[Lecturer] ([LiD])
 GO
 ALTER TABLE [dbo].[supervisor] CHECK CONSTRAINT [FK_supervisor_Lecturer]
 GO
+-- INDEXES --
+CREATE INDEX Stu_Name ON Student([Last Name], [First Name])
+CREATE INDEX Lec_Name ON Lecturer(LecturerName)
+SELECT * FROM student WHERE [Last Name] = N'Nguyễn Văn' AND [First name] = 'A'
+
+DROP VIEW View_Assess_AssessSysteM
+CREATE VIEW View_Assess_AssessSysteM
+AS
+(SELECT class.CLid, enroll.GiD, Assessment.Aid
+, semester.semester, [start date], [end date], course.CiD, [AS].CaID, [No question], Duration, [weight]
+FROM 
+	class INNER JOIN enroll ON class.CLid = Enroll.CLid
+			INNER JOIN course on course.CiD=class.CiD
+			INNER JOIN Assessment ON class.CiD = Assessment.CiD
+			INNER JOIN [Assessment system] AS [AS] ON [AS].Aid = Assessment.Aid
+			INNER JOIN semester ON semester.semester=class.semester)
+
+SELECT * FROM View_Assess_AssessSystem
+
+-- STORED PROCEDURE -- 
+
+CREATE PROCEDURE Count_Student
+	@GR VARCHAR(50),
+	@COUNT INT OUT
+AS
+BEGIN
+	SELECT @COUNT = COUNT(TBL.SiD) FROM 
+	(SELECT student.SiD,enroll.GiD
+	FROM student INNER JOIN [join] ON student.SiD=[join].SiD
+					INNER JOIN enroll ON [join].CLid=enroll.CLid
+	) AS TBL WHERE GiD = @GR
+END
+
+DECLARE @NumOfStu INT = 0;
+EXEC Count_Student @GR = 'IA1604', @COUNT = @NumOfStu OUT
+PRINT @NumOfStu;
+
+
 ```
 
