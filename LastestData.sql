@@ -1,4 +1,4 @@
-``` sql
+``` SQL
 USE [AssignmentDBI]
 GO
 /****** Object:  Table [dbo].[Assessment]    Script Date: 7/17/2022 3:06:05 PM ******/
